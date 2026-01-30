@@ -31,6 +31,7 @@ export KAGGLE_USER=$KAGGLE_USER
 export KAGGLE_CONFIG_DIR=$cred_dir
 
 # Activate environment
+# NOTE: this requires me to have sourced my own `~/.bash_profile`, which contains the `venv_act` function definition
 venv_act kaggle_env
 
 # Source shortcuts
