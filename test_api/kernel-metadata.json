@@ -1,6 +1,6 @@
 {
-  "id": "vventuri/TESTING-THINGS",
-  "title": "TESTING THINGS",
+  "id": "vventuri/TESTING-KAGGLE-API",
+  "title": "TESTING KAGGLE API",
   "code_file": "test.ipynb",
   "language": "python",
   "kernel_type": "notebook",
