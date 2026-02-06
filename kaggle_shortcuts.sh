@@ -26,3 +26,24 @@ kernel_init() {
     # Initialize kernel
     kaggle kernels init -p $location
 }
+
+
+# Function to push updates
+kaggle_push() {
+    # Get location (default to where the function was called from)
+    local location="${1:-$PWD}"
+
+    # Get the full path
+    # Prefer `realpath` when available, otherwise fall back to a portable `cd && pwd`.
+    if command -v realpath >/dev/null 2>&1; then
+        location="$( realpath -- "$location" )"
+    else
+        location="$( cd "$location" >/dev/null 2>&1 && pwd )"
+    fi
+
+    # Print so the user knows
+    echo "Pushing kernel in $location"
+
+    # Initialize kernel
+    kaggle kernels push -p $location
+}
