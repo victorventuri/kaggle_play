@@ -47,3 +47,31 @@ kaggle_push() {
     # Initialize kernel
     kaggle kernels push -p $location
 }
+
+
+# Function to pull updates
+kaggle_pull() {
+    # Get location (default to where the function was called from)
+    local location="${1:-$PWD}"
+
+    # Get the full path
+    # Prefer `realpath` when available, otherwise fall back to a portable `cd && pwd`.
+    if command -v realpath >/dev/null 2>&1; then
+        location="$( realpath -- "$location" )"
+    else
+        location="$( cd "$location" >/dev/null 2>&1 && pwd )"
+    fi
+
+    # Print so the user knows
+    echo "Pulling updates to kernel in $location"
+
+    # Extract kernel from json file if possible
+    METADATA="${location}/kernel-metadata.json"
+    if [[ -f "$METADATA" ]]; then
+        local KERNEL_ID=$(jq -r '.id' "${location}/kernel-metadata.json")
+        kaggle kernels pull $KERNEL_ID -p $location
+    else
+        local KERNEL_ID=$2
+        kaggle kernels pull $KERNEL_ID -p $location -m
+    fi
+}
