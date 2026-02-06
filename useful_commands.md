@@ -7,3 +7,4 @@ Here, I just talk a bit about some of the useful commands for using the Kaggle C
 3. `kaggle kernels pull $KAGGLE_USER/<kernel_name> / -p path/to/directory [-m]` will download the code from a specific kernel; the `-m` flag is technically optional, but required if we will push it back, as we need the metadata file
 4. `kaggle kernels output / -p path/to/directory` will download the outputs generated from a kernel run
 5. `kaggle kernels status /` checks the status of the kernel: running, complete, failed, etc.
+6. `kaggle competitions download -c <competition-name> -p path/to/directory` will download the competitions resources 

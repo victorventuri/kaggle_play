@@ -1,8 +1,8 @@
 {
-  "id": "vventuri/house-prices",
-  "id_no": 108806995,
-  "title": "house_prices",
-  "code_file": "house-prices.ipynb",
+  "id": "vventuri/houseprices",
+  "id_no": 108809897,
+  "title": "houseprices",
+  "code_file": "houseprices.ipynb",
   "language": "python",
   "kernel_type": "notebook",
   "is_private": true,
