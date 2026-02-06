@@ -1,2 +1,5 @@
 # Ignoring API keys
 .credentials/
+
+# Ignore data files
+*.csv
