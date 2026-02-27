@@ -3,6 +3,7 @@
 
 # Ignore data files
 *.csv
+*.parquet
 
 # Kaggle metadata
 *kernel-metadata.json
