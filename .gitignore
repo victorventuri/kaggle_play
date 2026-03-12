@@ -7,3 +7,6 @@
 
 # Kaggle metadata
 *kernel-metadata.json
+
+# Settings and stuff
+.vscode/
